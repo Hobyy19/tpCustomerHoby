@@ -1,4 +1,4 @@
-package com.customer.hoby.tpcustomerhoby;
+package mg.itu.tpcustomerhoby;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;

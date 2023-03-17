@@ -1,4 +1,4 @@
-package com.customer.hoby.tpcustomerhoby.resources;
+package mg.itu.tpcustomerhoby.resources;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

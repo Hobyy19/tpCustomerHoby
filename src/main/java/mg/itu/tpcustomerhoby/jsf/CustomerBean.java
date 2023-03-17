@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSF/JSFManagedBean.java to edit this template
  */
-package com.customer.hoby.tpcustomerhoby.jsf;
+package mg.itu.tpcustomerhoby.jsf;
 
-import com.customer.hoby.tpcustomerhoby.ejb.CustomerManager;
-import com.customer.hoby.tpcustomerhoby.entities.Customer;
+import mg.itu.tpcustomerhoby.ejb.CustomerManager;
+import mg.itu.tpcustomerhoby.entities.Customer;
 import jakarta.ejb.EJB;  
 import jakarta.inject.Named;  
 import jakarta.faces.view.ViewScoped;  
