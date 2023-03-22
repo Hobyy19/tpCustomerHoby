@@ -5,14 +5,20 @@
 package mg.itu.tpcustomerhoby.jsf;
 
 import jakarta.ejb.EJB;
+import jakarta.faces.view.ViewScoped;
+import jakarta.inject.Named;
+import java.io.Serializable;
 import mg.itu.tpcustomerhoby.ejb.CustomerManager;
 import mg.itu.tpcustomerhoby.entities.Customer;
 
 /**
  *
  * @author Hoby
+ * Backing bean pour la page customerDetails.xhtml.
  */
-public class CustomerDetailsBean {
+@Named
+@ViewScoped
+public class CustomerDetailsBean implements Serializable {
   private int idCustomer;
   private Customer customer;
   
