@@ -8,8 +8,11 @@ import jakarta.ejb.EJB;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
 import java.io.Serializable;
+import java.util.List;
 import mg.itu.tpcustomerhoby.ejb.CustomerManager;
+import mg.itu.tpcustomerhoby.ejb.DiscountManager;
 import mg.itu.tpcustomerhoby.entities.Customer;
+import mg.itu.tpcustomerhoby.entities.Discount;
 
 /**
  *
@@ -21,9 +24,13 @@ import mg.itu.tpcustomerhoby.entities.Customer;
 public class CustomerDetailsBean implements Serializable {
   private int idCustomer;
   private Customer customer;
+  private List<Discount> discounts;
   
   @EJB
-  private CustomerManager customerManager; 
+  private CustomerManager customerManager;
+  
+  @EJB
+  private DiscountManager discountManager;
     
   public int getIdCustomer() {
     return idCustomer;
@@ -55,6 +62,13 @@ public class CustomerDetailsBean implements Serializable {
 
   public void loadCustomer() {
     this.customer = customerManager.findById(idCustomer);
+  }
+  
+  /**
+   * Retourne la liste de tous les Discount.
+   */
+  public List<Discount> getDiscounts() {
+    return discountManager.getAllDiscounts();
   }
   
 }
